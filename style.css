@@ -394,10 +394,23 @@ footer {
     font-size: 1.5em;
     margin: 0 10px;
     transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-links a[href*="github"] {
+    color: #fff;
+}
+
+.social-links a[href*="gitlab"] {
+    color: #fc6d26;
+}
+
+.social-links a[href*="linkedin"] {
+    color: #0077b5;
 }
 
 .social-links a:hover {
-    color: #764ba2;
+    opacity: 0.7;
 }
 
 @media (max-width: 768px) {
