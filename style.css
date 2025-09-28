@@ -1,10 +1,68 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #fff;
-    background-color: #000;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.lang-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1em;
+}
+
+.lang-btn:hover {
+    background: #764ba2;
+}
+
+.cv-download {
+    display: inline-block;
+    margin-top: 30px;
+    background: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.cv-download:hover {
+    background: #764ba2;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+
+body .lang-fr {
+    display: none;
+}
+
+body .lang-en {
+    display: inline;
+}
+
+body.lang-fr .lang-fr {
+    display: inline;
+}
+
+body.lang-fr .lang-en {
+    display: none;
 }
 
 .container {
@@ -14,11 +72,38 @@ body {
 }
 
 header {
-    background: #1a1a1a;
+    background: linear-gradient(135deg, #000 0%, #111 100%);
     color: white;
-    padding: 50px 20px;
+    padding: 60px 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-header {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
+        repeat;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
 }
 
 header .container {
@@ -27,92 +112,175 @@ header .container {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .profile-photo {
     width: 250px;
     height: 300px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
     margin-right: 30px;
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
     object-fit: cover;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
 }
 
 .header-text {
     text-align: right;
+    animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 header h1 {
     margin: 0;
-    font-size: 3em;
-    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    font-size: 3.5em;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+    background: linear-gradient(45deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 header .title {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: 10px 0;
+    color: #f0f0f0;
 }
 
 header .location {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 10px 0;
+    color: #ddd;
 }
 
 header .contact {
     margin-top: 20px;
+    font-size: 1.1em;
 }
 
 header .contact i {
     margin-right: 10px;
+    color: #667eea;
+}
+
+header .contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header .contact a:hover {
+    color: #667eea;
 }
 
 section {
-    padding: 40px 0;
-    background: #1a1a1a;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #333;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 section:nth-child(even) {
-    background: #0f0f0f;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #667eea;
-    font-size: 2.5em;
-    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    font-size: 3em;
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    position: relative;
 }
 
-.job, .edu, .cert, .ref {
+section h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.job,
+.edu,
+.cert,
+.ref,
+.project {
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 25px;
     border-left: 5px solid #667eea;
-    background: #2a2a2a;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.job:hover, .edu:hover, .cert:hover, .ref:hover {
+.job:hover,
+.edu:hover,
+.cert:hover,
+.ref:hover,
+.project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    border-left-color: #764ba2;
 }
 
-.job h3, .edu h3, .cert h3, .ref h3 {
+.job h3,
+.edu h3,
+.cert h3,
+.ref h3,
+.project h3 {
     margin-top: 0;
     color: #fff;
+    font-size: 1.5em;
 }
 
-.company, .school {
+.company,
+.school {
     font-weight: bold;
     color: #764ba2;
+    font-size: 1.1em;
 }
 
-.period, .location {
+.period,
+.location {
     font-style: italic;
     color: #ccc;
+    font-size: 0.9em;
 }
 
 ul {
@@ -120,11 +288,39 @@ ul {
 }
 
 .skill-category {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-3px);
 }
 
 .skill-category h3 {
     color: #764ba2;
+    margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.8em;
+    transition: width 1s ease;
 }
 
 #languages ul {
@@ -135,22 +331,73 @@ ul {
 #languages li {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #languages li:hover {
     background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.02);
+}
+
+.project {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-left: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.project a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    margin-top: 10px;
 }
 
 footer {
-    background: #000;
+    background: linear-gradient(135deg, #000 0%, #111 100%);
     color: #ccc;
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid #333;
+    padding: 30px;
+    border-top: 2px solid #333;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #667eea;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #764ba2;
 }
 
 @media (max-width: 768px) {
@@ -166,9 +413,16 @@ footer {
         text-align: center;
     }
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
     section h2 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+    .job,
+    .edu,
+    .cert,
+    .ref,
+    .project {
+        padding: 20px;
     }
 }
