@@ -105,7 +105,7 @@ function updateCVLink() {
   const isFrench = document.body.classList.contains("lang-fr");
   cvLink.href = isFrench
     ? "assets/CV_ROLAND_FR.pdf"
-    : "assets/CV_Roland_EN.pdf";
+    : "assets/CV_ROLAND_EN.pdf";
 }
 
 document.getElementById("lang-toggle").addEventListener("click", function () {
