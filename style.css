@@ -585,6 +585,17 @@ section h2 i {
     margin-bottom: 8px;
     font-weight: 500;
     white-space: nowrap;
+    flex-shrink: 0;
+    min-width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: clip;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: auto;
+    -webkit-touch-callout: none;
 }
 
 .period i {
@@ -887,13 +898,22 @@ footer p {
     }
 
     .period {
-        gap: 4px;
-        padding: 4px 8px;
-        font-size: 0.8rem;
+        gap: 3px;
+        padding: 4px 6px;
+        font-size: 0.75rem;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+        text-overflow: clip;
         flex-wrap: nowrap;
+        flex-shrink: 0;
+        min-width: fit-content;
+        display: flex;
+        width: auto;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
     }
 }
 
