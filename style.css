@@ -477,11 +477,11 @@ section h2 i {
     gap: 24px;
 }
 
-.job, 
-.edu, 
-.cert, 
-.ref, 
-.project, 
+.job,
+.edu,
+.cert,
+.ref,
+.project,
 .skill-category {
     background: var(--glass-bg);
     backdrop-filter: blur(20px) saturate(180%);
@@ -584,6 +584,7 @@ section h2 i {
     border-radius: var(--radius-sm);
     margin-bottom: 8px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .period i {
