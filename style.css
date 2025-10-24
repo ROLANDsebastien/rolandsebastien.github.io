@@ -574,9 +574,7 @@ section h2 i {
 }
 
 .period {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline-block;
     font-size: 0.875rem;
     color: var(--text-tertiary);
     padding: 6px 12px;
@@ -585,16 +583,11 @@ section h2 i {
     margin-bottom: 8px;
     font-weight: 500;
     white-space: nowrap;
-    flex-shrink: 0;
-    min-width: fit-content;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: clip;
+    width: fit-content;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    pointer-events: auto;
     -webkit-touch-callout: none;
 }
 
@@ -898,22 +891,21 @@ footer p {
     }
 
     .period {
-        gap: 3px;
-        padding: 4px 6px;
+        padding: 4px 8px;
         font-size: 0.75rem;
         white-space: nowrap;
-        overflow: visible;
-        text-overflow: clip;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        min-width: fit-content;
-        display: flex;
-        width: auto;
+        display: inline-block;
+        width: fit-content;
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         -webkit-touch-callout: none;
+    }
+
+    .period i {
+        font-size: 10px;
+        margin-right: 2px;
     }
 }
 
