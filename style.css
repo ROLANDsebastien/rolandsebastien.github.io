@@ -885,6 +885,16 @@ footer p {
         padding: 24px;
         font-size: 1.125rem;
     }
+
+    .period {
+        gap: 4px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-wrap: nowrap;
+    }
 }
 
 /* ==================== SMOOTH SCROLLING ==================== */
