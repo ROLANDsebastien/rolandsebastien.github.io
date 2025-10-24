@@ -19,7 +19,7 @@
     --accent-indigo: #5856d6;
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(255, 255, 255, 0.4);
     --glass-border: rgba(255, 255, 255, 0.3);
     --glass-shadow: rgba(0, 0, 0, 0.1);
 
@@ -57,7 +57,7 @@
     --text-secondary: #98989d;
     --text-tertiary: #636366;
 
-    --glass-bg: rgba(28, 28, 30, 0.7);
+    --glass-bg: rgba(28, 28, 30, 0.4);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: rgba(0, 0, 0, 0.3);
 
