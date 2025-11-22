@@ -125,7 +125,7 @@ h1 {
 
 h2 {
     font-size: clamp(2rem, 3vw, 2.5rem);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -210,6 +210,27 @@ a:hover {
 .nav-link.active {
     color: var(--accent-blue);
     font-weight: 600;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.burger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 8px;
+    transition: color var(--transition-fast);
+}
+
+.burger-menu:hover {
+    color: var(--accent-blue);
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -683,6 +704,34 @@ footer p {
 
     .bento-grid {
         grid-template-columns: 1fr;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--glass-bg);
+        backdrop-filter: var(--glass-blur) saturate(180%);
+        -webkit-backdrop-filter: var(--glass-blur) saturate(180%);
+        border-bottom: 1px solid var(--glass-border);
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-controls {
+        display: flex;
+        gap: 12px;
     }
 
     .theme-toggle {

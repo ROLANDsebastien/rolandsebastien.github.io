@@ -126,6 +126,36 @@ function setupEventListeners() {
     langToggle.addEventListener("click", toggleLanguage);
   }
 
+  // Burger menu toggle
+  const burgerMenu = document.querySelector(".burger-menu");
+  const navLinks = document.querySelector(".nav-links");
+  const navControls = document.querySelector(".nav-controls");
+
+  if (burgerMenu) {
+    burgerMenu.addEventListener("click", () => {
+      navLinks?.classList.toggle("active");
+      const icon = burgerMenu.querySelector("i");
+      if (icon) {
+        icon.className = navLinks?.classList.contains("active")
+          ? "fas fa-times"
+          : "fas fa-bars";
+      }
+    });
+  }
+
+  // Close mobile menu when clicking a nav link
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 968) {
+        navLinks?.classList.remove('active');
+        const icon = burgerMenu?.querySelector('i');
+        if (icon) {
+          icon.className = 'fas fa-bars';
+        }
+      }
+    });
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
