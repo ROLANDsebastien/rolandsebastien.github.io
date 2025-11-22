@@ -1,1001 +1,708 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" id="theme-color-meta" content="#007aff" />
-        <meta
-            name="description"
-            content="Roland Sébastien - DevOps Engineer & QA Tester. Kubernetes, Docker, Terraform, CI/CD expert based in Brussels."
-        />
-        <meta
-            name="format-detection"
-            content="telephone=no, date=no, email=no, address=no"
-        />
-        <meta
-            name="keywords"
-            content="DevOps, QA, Tester, Kubernetes, Docker, Terraform, Ansible, CI/CD, Brussels"
-        />
-        <title>Roland Sébastien - DevOps / QA Tester</title>
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="assets/favicon-16x16.png"
-        />
-        <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-        <link rel="manifest" href="assets/site.webmanifest" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" id="theme-color-meta" content="#007aff" />
+    <meta name="description"
+        content="Roland Sébastien - DevOps Engineer & QA Tester. Kubernetes, Docker, Terraform, CI/CD expert based in Brussels." />
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+    <meta name="keywords" content="DevOps, QA, Tester, Kubernetes, Docker, Terraform, Ansible, CI/CD, Brussels" />
+    <title>Roland Sébastien - DevOps / QA Tester</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="style.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
 
-        <!-- Preconnect for performance -->
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    </head>
-    <body>
-        <!-- Theme Toggle Button -->
-        <button class="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-        </button>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        <!-- Language Toggle -->
-        <div class="lang-toggle-container">
-            <button id="lang-toggle" class="lang-btn">FR</button>
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+</head>
+
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="nav-bar">
+        <a href="#" class="nav-logo">Roland Sébastien</a>
+        <div class="nav-links">
+            <a href="#profile" class="nav-link">
+                <span class="lang-en">Profile</span>
+                <span class="lang-fr">Profil</span>
+            </a>
+            <a href="#experience" class="nav-link">
+                <span class="lang-en">Experience</span>
+                <span class="lang-fr">Expérience</span>
+            </a>
+            <a href="#projects-section" class="nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-fr">Projets</span>
+            </a>
+            <a href="#skills" class="nav-link">
+                <span class="lang-en">Skills</span>
+                <span class="lang-fr">Compétences</span>
+            </a>
         </div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+            <button id="lang-toggle" class="lang-btn"
+                style="position: static; padding: 8px 16px; font-size: 12px;">FR</button>
+            <button class="theme-toggle" aria-label="Toggle theme"
+                style="position: static; width: 40px; height: 40px; box-shadow: none; border: none; background: transparent;">
+                <i class="fas fa-moon" style="font-size: 20px;"></i>
+            </button>
+        </div>
+    </nav>
 
-        <!-- Header Section -->
-        <header>
-            <div class="container">
-                <div class="header-content">
-                    <!-- Profile Card -->
-                    <div class="profile-card">
-                        <img
-                            src="assets/photo.jpg"
-                            alt="Photo of Roland Sébastien"
-                            class="profile-photo"
-                        />
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-photo-container">
+                    <img src="assets/photo.jpg" alt="Roland Sébastien" class="profile-photo" />
+                </div>
+
+                <div class="hero-text">
+                    <h1>Roland Sébastien</h1>
+
+                    <p class="hero-title">
+                        <span class="lang-en">DevOps Engineer & QA Tester</span>
+                        <span class="lang-fr">Ingénieur DevOps & Testeur QA</span>
+                    </p>
+
+                    <div class="hero-badges">
+                        <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Brussels, Belgium</span>
+                        <span class="hero-badge"><i class="fas fa-check-circle"></i> ISTQB Certified</span>
+                        <span class="hero-badge"><i class="fas fa-code"></i> Open to Work</span>
                     </div>
 
-                    <!-- Header Text -->
-                    <div class="header-text">
-                        <h1>Roland Sébastien</h1>
-                        <p class="title">
-                            <span class="lang-en">DevOps / QA Tester</span>
-                            <span class="lang-fr">DevOps / Testeur QA</span>
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Brussels, Belgium</span>
-                            <span class="lang-fr">Bruxelles, Belgique</span>
-                        </p>
-
-                        <!-- Contact Info -->
-                        <div class="contact">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+3249242725">+32 492 42 72 25</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:sebastien.roland@icloud.com"
-                                    >sebastien.roland@icloud.com</a
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Social Links -->
-                        <div class="social-links">
-                            <a
-                                href="https://github.com/ROLANDsebastien"
-                                target="_blank"
-                                class="social-link github"
-                            >
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a
-                                href="https://gitlab.com/ROLANDsebastien"
-                                target="_blank"
-                                class="social-link gitlab"
-                            >
-                                <i class="fab fa-gitlab"></i>
-                                <span>GitLab</span>
-                            </a>
-                            <a
-                                href="https://linkedin.com/in/roland-sebastien"
-                                target="_blank"
-                                class="social-link linkedin"
-                            >
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-
-                        <!-- CV Download -->
-                        <a
-                            href="assets/CV_ROLAND_EN.pdf"
-                            target="_blank"
-                            class="cv-download"
-                        >
+                    <div class="social-links">
+                        <a href="https://github.com/ROLANDsebastien" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/roland-sebastien" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="assets/CV_ROLAND_EN.pdf" target="_blank" class="cv-download">
                             <i class="fas fa-download"></i>
-                            <span class="lang-en">Download CV</span>
-                            <span class="lang-fr">Télécharger CV</span>
+                            <span class="lang-en">Resume</span>
+                            <span class="lang-fr">CV</span>
                         </a>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Profile Section -->
-        <section id="profile">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-user"></i>
-                    <span class="lang-en">Profile</span>
-                    <span class="lang-fr">Profil</span>
-                </h2>
-                <p>
-                    <span class="lang-en">
-                        With a solid retraining as a junior DevOps and an ISTQB
-                        certification, I have acquired technical skills in
-                        Kubernetes, Docker, Terraform, and Ansible. My atypical
-                        background has taught me versatility and rigor, allowing
-                        me to approach integration and deployment projects in a
-                        team. I have a strong curiosity for AI and I am also
-                        able to evolve towards system administrator roles or
-                        similar professions. My profile is eligible for the
-                        Activa Brussels program and I am open to an FPIE.
-                    </span>
-                    <span class="lang-fr">
-                        Avec une solide reconversion en tant que DevOps junior
-                        et une certification ISTQB, j'ai acquis des compétences
-                        techniques en Kubernetes, Docker, Terraform et Ansible.
-                        Mon parcours atypique m'a enseigné la polyvalence et la
-                        rigueur, me permettant d'aborder les projets
-                        d'intégration et de déploiement en équipe. J'ai une
-                        forte curiosité pour l'IA et je suis également capable
-                        d'évoluer vers des rôles d'administrateur système ou des
-                        métiers similaires. Mon profil est éligible au programme
-                        Activa Bruxelles et je suis ouvert à un FPIE.
-                    </span>
-                </p>
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="container">
+            <h2>
+                <i class="fas fa-user"></i>
+                <span class="lang-en">Profile</span>
+                <span class="lang-fr">Profil</span>
+            </h2>
+            <p>
+                <span class="lang-en">
+                    With a solid retraining as a junior DevOps and an ISTQB
+                    certification, I have acquired technical skills in
+                    Kubernetes, Docker, Terraform, and Ansible. My atypical
+                    background has taught me versatility and rigor, allowing
+                    me to approach integration and deployment projects in a
+                    team. I have a strong curiosity for AI and I am also
+                    able to evolve towards system administrator roles or
+                    similar professions. My profile is eligible for the
+                    Activa Brussels program and I am open to an FPIE.
+                </span>
+                <span class="lang-fr">
+                    Avec une solide reconversion en tant que DevOps junior
+                    et une certification ISTQB, j'ai acquis des compétences
+                    techniques en Kubernetes, Docker, Terraform et Ansible.
+                    Mon parcours atypique m'a enseigné la polyvalence et la
+                    rigueur, me permettant d'aborder les projets
+                    d'intégration et de déploiement en équipe. J'ai une
+                    forte curiosité pour l'IA et je suis également capable
+                    d'évoluer vers des rôles d'administrateur système ou des
+                    métiers similaires. Mon profil est éligible au programme
+                    Activa Bruxelles et je suis ouvert à un FPIE.
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>
+                <i class="fas fa-briefcase"></i>
+                <span class="lang-en">Experience</span>
+                <span class="lang-fr">Expérience</span>
+            </h2>
+            <div class="bento-grid">
+                <!-- DevOps Intern -->
+                <div class="bento-card col-span-2">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>
+                        <span class="lang-en">DevOps Intern</span>
+                        <span class="lang-fr">Stagiaire DevOps</span>
+                    </h3>
+                    <p class="company">Workstation</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i>
+                        06/2025 - <span class="lang-en">Present</span><span class="lang-fr">Présent</span>
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Brussels, Belgium</span>
+                        <span class="lang-fr">Bruxelles, Belgique</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="lang-en">Setup and configuration of Kubernetes clusters with k3s for
+                                development environments</span>
+                            <span class="lang-fr">Mise en place et configuration de clusters Kubernetes avec k3s pour
+                                des environnements de développement</span>
+                        </li>
+                        <li>
+                            <span class="lang-en">Creation and optimization of Docker images for various
+                                applications</span>
+                            <span class="lang-fr">Création et optimisation d'images Docker pour diverses
+                                applications</span>
+                        </li>
+                        <li>
+                            <span class="lang-en">Development of Terraform scripts to automate the creation and
+                                management of virtual machines on Microsoft Azure</span>
+                            <span class="lang-fr">Développement de scripts Terraform pour automatiser la création et la
+                                gestion de machines virtuelles sur Microsoft Azure</span>
+                        </li>
+                        <li>
+                            <span class="lang-en">Use of Ansible playbooks for automated provisioning and configuration
+                                of virtual machines</span>
+                            <span class="lang-fr">Utilisation de playbooks Ansible pour l'approvisionnement et la
+                                configuration automatisés des machines virtuelles</span>
+                        </li>
+                        <li>Bash scripting, Linux</li>
+                    </ul>
+                </div>
+
+                <!-- QA Intern -->
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-vial"></i></div>
+                    <h3>
+                        <span class="lang-en">QA Testing Intern</span>
+                        <span class="lang-fr">Stagiaire Testeur QA</span>
+                    </h3>
+                    <p class="company">CellTest RTBF</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 08/2024 - 10/2024
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Brussels, Belgium</span>
+                        <span class="lang-fr">Bruxelles, Belgique</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="lang-en">Active participation in the quality assurance of the AUVIO streaming
+                                service</span>
+                            <span class="lang-fr">Participation active à l'assurance qualité du service de streaming
+                                AUVIO</span>
+                        </li>
+                        <li>
+                            <span class="lang-en">Use of Squash Test for designing test cases</span>
+                            <span class="lang-fr">Utilisation de Squash Test pour la conception des cas de tests</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Order Picker -->
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>
+                        <span class="lang-en">Order Picker</span>
+                        <span class="lang-fr">Préparateur de commandes</span>
+                    </h3>
+                    <p class="company">Delhaize</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 09/2022 - 05/2024
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Zellik, Belgium</span>
+                        <span class="lang-fr">Zellik, Belgique</span>
+                    </p>
+                </div>
+
+                <!-- Head Waiter -->
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-concierge-bell"></i></div>
+                    <h3>
+                        <span class="lang-en">Head Waiter</span>
+                        <span class="lang-fr">Chef de rang</span>
+                    </h3>
+                    <p class="company">Résidence P&V</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 12/2011 - 05/2021
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Megève, France</span>
+                        <span class="lang-fr">Megève, France</span>
+                    </p>
+                </div>
+
+                <!-- Lighting Engineer -->
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>
+                        <span class="lang-en">Lighting Engineer</span>
+                        <span class="lang-fr">Ingénieur lumières</span>
+                    </h3>
+                    <p class="company">S.A.R.L Elison / Eldorado & Co</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 1999 - 2010
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Lyon, France</span>
+                        <span class="lang-fr">Lyon, France</span>
+                    </p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section -->
-        <section id="experience">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-briefcase"></i>
-                    <span class="lang-en">Experience</span>
-                    <span class="lang-fr">Expérience</span>
-                </h2>
-                <div class="card-grid">
-                    <!-- DevOps Intern -->
-                    <div class="job">
-                        <h3>
-                            <i class="fas fa-laptop-code"></i>
-                            <span class="lang-en">DevOps Intern</span>
-                            <span class="lang-fr">Stagiaire DevOps</span>
-                        </h3>
-                        <p class="company">Workstation</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i>
-                            06/2025 - <span class="lang-en">Present</span
-                            ><span class="lang-fr">Présent</span>
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Brussels, Belgium</span>
-                            <span class="lang-fr">Bruxelles, Belgique</span>
-                        </p>
-                        <ul>
-                            <li>
-                                <span class="lang-en"
-                                    >Setup and configuration of Kubernetes
-                                    clusters with k3s for development
-                                    environments</span
-                                >
-                                <span class="lang-fr"
-                                    >Mise en place et configuration de clusters
-                                    Kubernetes avec k3s pour des environnements
-                                    de développement</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Creation and optimization of Docker images
-                                    for various applications</span
-                                >
-                                <span class="lang-fr"
-                                    >Création et optimisation d'images Docker
-                                    pour diverses applications</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Development of Terraform scripts to
-                                    automate the creation and management of
-                                    virtual machines on Microsoft Azure</span
-                                >
-                                <span class="lang-fr"
-                                    >Développement de scripts Terraform pour
-                                    automatiser la création et la gestion de
-                                    machines virtuelles sur Microsoft
-                                    Azure</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Use of Ansible playbooks for automated
-                                    provisioning and configuration of virtual
-                                    machines</span
-                                >
-                                <span class="lang-fr"
-                                    >Utilisation de playbooks Ansible pour
-                                    l'approvisionnement et la configuration
-                                    automatisés des machines virtuelles</span
-                                >
-                            </li>
-                            <li>Bash scripting, Linux</li>
-                        </ul>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>
+                <i class="fas fa-graduation-cap"></i>
+                <span class="lang-en">Education</span>
+                <span class="lang-fr">Éducation</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card col-span-2">
+                    <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>
+                        DevOps
+                    </h3>
+                    <p class="company">Bruxelles Formation</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 11/2024 - 05/2025
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Brussels, Belgium</span>
+                        <span class="lang-fr">Bruxelles, Belgique</span>
+                    </p>
+                    <p>
+                        <span class="lang-en">Versioning with Git, Containerization with Docker and Kubernetes,
+                            infrastructure as code with Terraform, automation of provisioning and configuration with
+                            Ansible, CI/CD with Jenkins and GitLab CI, Testing with Selenium and SonarQube, Monitoring
+                            with Prometheus and Grafana</span>
+                        <span class="lang-fr">Versioning avec Git, Containerization avec Docker and Kubernetes,
+                            infrastructure as code avec Terraform, automatisation du provisionnement et configuration
+                            avec Ansible, CI/CD avec Jenkins et GitLab CI, Tests avec Selenium et SonarQube, Monitoring
+                            avec Prometheus et Grafana</span>
+                    </p>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-bug"></i></div>
+                    <h3>
+                        <span class="lang-en">QA Tester</span>
+                        <span class="lang-fr">Testeur QA</span>
+                    </h3>
+                    <p class="company">Bruxelles Formation</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 05/2024 - 10/2024
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Brussels, Belgium</span>
+                        <span class="lang-fr">Bruxelles, Belgique</span>
+                    </p>
+                    <p>
+                        <span class="lang-en">Initiation into the world of testing. Test plans and test cases. Agile
+                            methodologies. Tickets, Communication and Bugs. Bug management and report writing</span>
+                        <span class="lang-fr">Initiation au monde du testing. Plans de test et cas de test.
+                            Méthodologies agiles. Tickets, Communication et Bugs. Gestion des bugs et rédactions de
+                            rapports</span>
+                    </p>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>
+                        <span class="lang-en">BAC Pro Computer Maintenance</span>
+                        <span class="lang-fr">BAC Pro Technicien d'Assistance Informatique</span>
+                    </h3>
+                    <p class="company">Alpes Avenir Formation</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 01/2010 - 02/2011
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Grenoble, France</span>
+                        <span class="lang-fr">Grenoble, France</span>
+                    </p>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h3>
+                        <span class="lang-en">BEP / CAP Metal Structures</span>
+                        <span class="lang-fr">BEP / CAP Structures Métalliques</span>
+                    </h3>
+                    <p class="company">Lycée Monge</p>
+                    <p class="period">
+                        <i class="fas fa-calendar-alt"></i> 1996 - 1998
+                    </p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-en">Chambéry, France</span>
+                        <span class="lang-fr">Chambéry, France</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>
+                <i class="fas fa-tools"></i>
+                <span class="lang-en">Skills</span>
+                <span class="lang-fr">Compétences</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card col-span-2">
+                    <div class="card-icon"><i class="fas fa-server"></i></div>
+                    <h3>
+                        DevOps
+                    </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 85%">
+                            85%
+                        </div>
                     </div>
+                    <p>
+                        Kubernetes, Docker, Terraform, Ansible, CI/CD (Jenkins, GitLab CI)
+                    </p>
+                </div>
 
-                    <!-- QA Intern -->
-                    <div class="job">
-                        <h3>
-                            <i class="fas fa-vial"></i>
-                            <span class="lang-en">QA Testing Intern</span>
-                            <span class="lang-fr">Stagiaire Testeur QA</span>
-                        </h3>
-                        <p class="company">CellTest RTBF</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 08/2024<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>10/2024
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Brussels, Belgium</span>
-                            <span class="lang-fr">Bruxelles, Belgique</span>
-                        </p>
-                        <ul>
-                            <li>
-                                <span class="lang-en"
-                                    >Active participation in the quality
-                                    assurance of the AUVIO streaming service,
-                                    conducting functional tests on a wide range
-                                    of platforms (Web, Mobile, TV connected,
-                                    Console)</span
-                                >
-                                <span class="lang-fr"
-                                    >Participation active à l'assurance qualité
-                                    du service de streaming AUVIO, en réalisant
-                                    des tests fonctionnels sur une large gamme
-                                    de plateformes (Web, Mobile, TV connectée,
-                                    Console)</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Use of Squash Test for designing test cases
-                                    and organizing functional and regression
-                                    test campaigns</span
-                                >
-                                <span class="lang-fr"
-                                    >Utilisation de Squash Test pour la
-                                    conception des cas de tests et
-                                    l'organisation des campagnes de tests
-                                    fonctionnels et de régression</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Identification, documentation, and
-                                    follow-up of anomalies via Jira within the
-                                    AUVIO project testing team</span
-                                >
-                                <span class="lang-fr"
-                                    >Identification, documentation et suivi des
-                                    anomalies via Jira au sein de l'équipe de
-                                    test du projet AUVIO</span
-                                >
-                            </li>
-                        </ul>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>
+                        <span class="lang-en">Systems & Scripting</span>
+                        <span class="lang-fr">Systèmes & Scripting</span>
+                    </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 80%">
+                            80%
+                        </div>
                     </div>
+                    <p>Linux, macOS, Git, Bash scripting</p>
+                </div>
 
-                    <!-- Order Picker -->
-                    <div class="job">
-                        <h3>
-                            <i class="fas fa-boxes"></i>
-                            <span class="lang-en">Order Picker</span>
-                            <span class="lang-fr"
-                                >Préparateur de commandes</span
-                            >
-                        </h3>
-                        <p class="company">Delhaize</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 09/2022<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>05/2024
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Zellik, Belgium</span>
-                            <span class="lang-fr">Zellik, Belgique</span>
-                        </p>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>
+                        <span class="lang-en">Testing & Quality</span>
+                        <span class="lang-fr">Tests & Qualité</span>
+                    </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 90%">
+                            90%
+                        </div>
                     </div>
+                    <p>
+                        ISTQB (CTFL),
+                        <span class="lang-en">Functional tests, manual, regression, Squash Test, Jira</span>
+                        <span class="lang-fr">Tests fonctionnels, manuels, de régression, Squash Test, Jira</span>
+                    </p>
+                </div>
 
-                    <!-- Head Waiter -->
-                    <div class="job">
-                        <h3>
-                            <i class="fas fa-concierge-bell"></i>
-                            <span class="lang-en">Head Waiter</span>
-                            <span class="lang-fr">Chef de rang</span>
-                        </h3>
-                        <p class="company">Résidence P&V</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 12/2011<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>05/2021
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Megève, France</span>
-                            <span class="lang-fr">Megève, France</span>
-                        </p>
-                        <ul>
-                            <li>
-                                <span class="lang-en"
-                                    >Table service, Bar service, and cash
-                                    handling</span
-                                >
-                                <span class="lang-fr"
-                                    >Service en salle, Service au Bar et les
-                                    encaissements</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Inventory and schedule management</span
-                                >
-                                <span class="lang-fr"
-                                    >Inventaire et gestion des plannings</span
-                                >
-                            </li>
-                        </ul>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3>
+                        Soft Skills
+                    </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 95%">
+                            95%
+                        </div>
                     </div>
+                    <p>
+                        Agile,
+                        <span class="lang-en">Team spirit, Customer-oriented, Punctual, Rigor, Organization</span>
+                        <span class="lang-fr">Esprit d'équipe, Orienté client, Ponctuel, Rigueur, Organisation</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Lighting Engineer -->
-                    <div class="job">
-                        <h3>
-                            <i class="fas fa-lightbulb"></i>
-                            <span class="lang-en">Lighting Engineer</span>
-                            <span class="lang-fr">Ingénieur lumières</span>
-                        </h3>
-                        <p class="company">S.A.R.L Elison / Eldorado & Co</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 1999 - 2010
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Lyon, France</span>
-                            <span class="lang-fr">Lyon, France</span>
-                        </p>
-                        <ul>
-                            <li>
-                                <span class="lang-en"
-                                    >Lighting engineer on servo-controlled
-                                    lights</span
-                                >
-                                <span class="lang-fr"
-                                    >Ingénieur lumières sur projecteurs
-                                    asservis</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Creation of stage plans</span
-                                >
-                                <span class="lang-fr"
-                                    >Création de plans de scène</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Event evenings in Europe</span
-                                >
-                                <span class="lang-fr"
-                                    >Soirées événementielles en Europe</span
-                                >
-                            </li>
-                            <li>
-                                <span class="lang-en"
-                                    >Lighting technician for concerts and
-                                    stadiums</span
-                                >
-                                <span class="lang-fr"
-                                    >Technicien lumières sur les concerts et
-                                    stades</span
-                                >
-                            </li>
-                        </ul>
+    <!-- Languages Section -->
+    <section id="languages">
+        <div class="container">
+            <h2>
+                <i class="fas fa-language"></i>
+                <span class="lang-en">Languages</span>
+                <span class="lang-fr">Langues</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-star"></i></div>
+                    <h3>
+                        <span class="lang-en">French</span>
+                        <span class="lang-fr">Français</span>
+                    </h3>
+                    <p>
+                        <span class="lang-en">Native</span>
+                        <span class="lang-fr">Natif</span>
+                    </p>
+                </div>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>
+                        <span class="lang-en">English</span>
+                        <span class="lang-fr">Anglais</span>
+                    </h3>
+                    <p>
+                        <span class="lang-en">Advanced (C1)</span>
+                        <span class="lang-fr">Avancé (C1)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-section">
+        <div class="container">
+            <h2>
+                <i class="fas fa-project-diagram"></i>
+                <span class="lang-en">Projects</span>
+                <span class="lang-fr">Projets</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/iac-jenkins.git" target="_blank">iac-jenkins</a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A project for Infrastructure as Code with Jenkins.</span>
+                        <span class="lang-fr">Un projet d'Infrastructure as Code avec Jenkins.</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">Jenkins</span>
+                        <span class="badge">IaC</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/terraform-ansible-gitops.git"
+                            target="_blank">terraform-ansible-gitops</a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A project using Terraform, Ansible and GitOps.</span>
+                        <span class="lang-fr">Un projet utilisant Terraform, Ansible et GitOps.</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">Terraform</span>
+                        <span class="badge">Ansible</span>
+                        <span class="badge">GitOps</span>
+                    </div>
+                </div>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/devops-cluster-gitops" target="_blank">DevOps
+                            Cluster GitOps</a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A DevOps project implementing GitOps for Kubernetes clusters</span>
+                        <span class="lang-fr">Un projet DevOps implémentant GitOps pour des clusters Kubernetes</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">Kubernetes</span>
+                        <span class="badge">GitOps</span>
+                        <span class="badge">CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/FM-COMPTA-Consulting"
+                            target="_blank">FM-COMPTA-Consulting</a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A TypeScript project for accounting
+                            consulting</span>
+                        <span class="lang-fr">Un projet TypeScript pour le conseil
+                            comptable</span>
+                    </p>
+                    <div>
+                        <span class="badge">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/media-convertor" target="_blank">
+                            Media Convertor
+                        </a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A Swift application for media conversion with advanced features</span>
+                        <span class="lang-fr">Une application Swift pour la conversion de médias avec des
+                            fonctionnalités avancées</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">Swift</span>
+                        <span class="badge">macOS</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/QA-Project" target="_blank">
+                            QA-Project
+                        </a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A TypeScript project focused on quality assurance and testing tools</span>
+                        <span class="lang-fr">Un projet TypeScript axé sur l'assurance qualité et les outils de
+                            test</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">TypeScript</span>
+                        <span class="badge">QA</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
+                    <h3>
+                        <a href="https://github.com/ROLANDsebastien/Resume-ATS" target="_blank">
+                            Resume-ATS
+                        </a>
+                    </h3>
+                    <p>
+                        <span class="lang-en">A Swift project for resume optimization and ATS compatibility</span>
+                        <span class="lang-fr">Un projet Swift pour l'optimisation de CV et la compatibilité ATS</span>
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="badge">Swift</span>
+                        <span class="badge">AI</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-graduation-cap"></i>
-                    <span class="lang-en">Education</span>
-                    <span class="lang-fr">Éducation</span>
-                </h2>
-                <div class="card-grid">
-                    <div class="edu">
-                        <h3>
-                            <i class="fas fa-cloud"></i>
-                            DevOps
-                        </h3>
-                        <p class="company">Bruxelles Formation</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 11/2024<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>05/2025
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Brussels, Belgium</span>
-                            <span class="lang-fr">Bruxelles, Belgique</span>
-                        </p>
-                        <p>
-                            <span class="lang-en"
-                                >Versioning with Git, Containerization with
-                                Docker and Kubernetes, infrastructure as code
-                                with Terraform, automation of provisioning and
-                                configuration with Ansible, CI/CD with Jenkins
-                                and GitLab CI, Testing with Selenium and
-                                SonarQube, Monitoring with Prometheus and
-                                Grafana</span
-                            >
-                            <span class="lang-fr"
-                                >Versioning avec Git, Containerization avec
-                                Docker and Kubernetes, infrastructure as code
-                                avec Terraform, automatisation du
-                                provisionnement et configuration avec Ansible,
-                                CI/CD avec Jenkins et GitLab CI, Tests avec
-                                Selenium et SonarQube, Monitoring avec
-                                Prometheus et Grafana</span
-                            >
-                        </p>
-                    </div>
-
-                    <div class="edu">
-                        <h3>
-                            <i class="fas fa-bug"></i>
-                            <span class="lang-en">QA Tester</span>
-                            <span class="lang-fr">Testeur QA</span>
-                        </h3>
-                        <p class="company">Bruxelles Formation</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 05/2024<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>10/2024
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Brussels, Belgium</span>
-                            <span class="lang-fr">Bruxelles, Belgique</span>
-                        </p>
-                        <p>
-                            <span class="lang-en"
-                                >Initiation into the world of testing. Test
-                                plans and test cases. Agile methodologies.
-                                Tickets, Communication and Bugs. Bug management
-                                and report writing</span
-                            >
-                            <span class="lang-fr"
-                                >Initiation au monde du testing. Plans de test
-                                et cas de test. Méthodologies agiles. Tickets,
-                                Communication et Bugs. Gestion des bugs et
-                                rédactions de rapports</span
-                            >
-                        </p>
-                    </div>
-
-                    <div class="edu">
-                        <h3>
-                            <i class="fas fa-desktop"></i>
-                            <span class="lang-en"
-                                >BAC Pro Computer Maintenance Technician and
-                                Networks</span
-                            >
-                            <span class="lang-fr"
-                                >BAC Pro Technicien d'Assistance Informatique et
-                                Réseaux</span
-                            >
-                        </h3>
-                        <p class="company">Alpes Avenir Formation</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 01/2010<span
-                                style="display: none"
-                            ></span>
-                            ‐ <span style="display: none"></span>02/2011
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Grenoble, France</span>
-                            <span class="lang-fr">Grenoble, France</span>
-                        </p>
-                        <p>
-                            <span class="lang-en"
-                                >Installation / Repair of a Windows system.
-                                Learning the basics of networking. Diagnosing
-                                system and network failures. Repair and
-                                replacement of hardware</span
-                            >
-                            <span class="lang-fr"
-                                >Installation / Réparation d'un système Windows.
-                                Apprentissage des bases du réseau. Diagnostiquer
-                                les pannes système et réseaux. Réparation et
-                                remplacement de matériel</span
-                            >
-                        </p>
-                    </div>
-
-                    <div class="edu">
-                        <h3>
-                            <i class="fas fa-hard-hat"></i>
-                            <span class="lang-en"
-                                >BEP / CAP Metal Structures</span
-                            >
-                            <span class="lang-fr"
-                                >BEP / CAP Structures Métalliques</span
-                            >
-                        </h3>
-                        <p class="company">Lycée Monge</p>
-                        <p class="period">
-                            <i class="fas fa-calendar-alt"></i> 1996 - 1998
-                        </p>
-                        <p class="location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="lang-en">Chambéry, France</span>
-                            <span class="lang-fr">Chambéry, France</span>
-                        </p>
-                    </div>
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>
+                <i class="fas fa-certificate"></i>
+                <span class="lang-en">Certifications</span>
+                <span class="lang-fr">Certifications</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <h3>
+                        ISTQB (CTFL)
+                    </h3>
+                    <p class="company">GASQ</p>
+                    <p>
+                        <i class="fas fa-id-badge"></i>
+                        <span class="lang-en">Certification Number: 115594</span>
+                        <span class="lang-fr">Numéro de certification : 115594</span>
+                    </p>
+                    <p class="period">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="lang-en">8 November 2024</span>
+                        <span class="lang-fr">8 Novembre 2024</span>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-tools"></i>
-                    <span class="lang-en">Skills</span>
-                    <span class="lang-fr">Compétences</span>
-                </h2>
-                <div class="card-grid">
-                    <div class="skill-category">
-                        <h3>
-                            <i class="fas fa-server"></i>
-                            DevOps
-                        </h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 85%">
-                                85%
-                            </div>
-                        </div>
-                        <p>
-                            Kubernetes, Docker, Terraform, Ansible, CI/CD
-                            (Jenkins, GitLab CI)
-                        </p>
-                    </div>
+    <!-- References Section -->
+    <section id="references">
+        <div class="container">
+            <h2>
+                <i class="fas fa-handshake"></i>
+                <span class="lang-en">References</span>
+                <span class="lang-fr">Références</span>
+            </h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>
+                        Balinder Walia
+                    </h3>
+                    <p class="company">DevOps / SRE</p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:bwalia@workstation.be">bwalia@workstation.be</a>
+                    </p>
+                </div>
 
-                    <div class="skill-category">
-                        <h3>
-                            <i class="fas fa-terminal"></i>
-                            <span class="lang-en">Systems & Scripting</span>
-                            <span class="lang-fr">Systèmes & Scripting</span>
-                        </h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 80%">
-                                80%
-                            </div>
-                        </div>
-                        <p>Linux, macOS, Git, Bash scripting</p>
-                    </div>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>
+                        HERBOMEZ Sonia
+                    </h3>
+                    <p class="company">
+                        <span class="lang-en">RTBF Testing Cell Manager</span>
+                        <span class="lang-fr">Responsable cellule Testing RTBF</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:scap@rtbf.be">scap@rtbf.be</a>
+                    </p>
+                </div>
 
-                    <div class="skill-category">
-                        <h3>
-                            <i class="fas fa-check-circle"></i>
-                            <span class="lang-en">Testing & Quality</span>
-                            <span class="lang-fr">Tests & Qualité</span>
-                        </h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 90%">
-                                90%
-                            </div>
-                        </div>
-                        <p>
-                            ISTQB (CTFL),
-                            <span class="lang-en"
-                                >Functional tests, manual, regression, Squash
-                                Test, Jira</span
-                            >
-                            <span class="lang-fr"
-                                >Tests fonctionnels, manuels, de régression,
-                                Squash Test, Jira</span
-                            >
-                        </p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>
-                            <i class="fas fa-users"></i>
-                            Soft Skills
-                        </h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 95%">
-                                95%
-                            </div>
-                        </div>
-                        <p>
-                            Agile,
-                            <span class="lang-en"
-                                >Team spirit, Customer-oriented, Punctual,
-                                Rigor, Organization</span
-                            >
-                            <span class="lang-fr"
-                                >Esprit d'équipe, Orienté client, Ponctuel,
-                                Rigueur, Organisation</span
-                            >
-                        </p>
-                    </div>
+                <div class="bento-card">
+                    <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>
+                        EL FALH Tarek
+                    </h3>
+                    <p class="company">Senior IT Specialist</p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tarek.elfaleh@gmail.com">tarek.elfaleh@gmail.com</a>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Languages Section -->
-        <section id="languages">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-language"></i>
-                    <span class="lang-en">Languages</span>
-                    <span class="lang-fr">Langues</span>
-                </h2>
-                <ul>
-                    <li>
-                        <i class="fas fa-star"></i>
-                        <span class="lang-en">French - Native</span>
-                        <span class="lang-fr">Français - Natif</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-star"></i>
-                        <span class="lang-en">English - Advanced (C1)</span>
-                        <span class="lang-fr">Anglais - Avancé (C1)</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>ROLAND Sebastien - 2025</p>
+        </div>
+    </footer>
 
-        <!-- Projects Section -->
-        <section id="projects-section">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-project-diagram"></i>
-                    <span class="lang-en">Projects</span>
-                    <span class="lang-fr">Projets</span>
-                </h2>
-                <div class="card-grid">
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/iac-jenkins.git"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                iac-jenkins
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A project for Infrastructure as Code with
-                                Jenkins.</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet d'Infrastructure as Code avec
-                                Jenkins.</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">Jenkins</span>
-                            <span class="badge">IaC</span>
-                        </div>
-                    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
 
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/terraform-ansible-gitops.git"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                terraform-ansible-gitops
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A project using Terraform, Ansible and
-                                GitOps.</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet utilisant Terraform, Ansible et
-                                GitOps.</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">Terraform</span>
-                            <span class="badge">Ansible</span>
-                            <span class="badge">GitOps</span>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/devops-cluster-gitops"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                DevOps Cluster GitOps
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A DevOps project implementing GitOps for
-                                Kubernetes clusters, focusing on CI/CD
-                                automation and infrastructure as code</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet DevOps implémentant GitOps pour des
-                                clusters Kubernetes, axé sur l'automatisation
-                                CI/CD et l'infrastructure as code</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">Kubernetes</span>
-                            <span class="badge">GitOps</span>
-                            <span class="badge">CI/CD</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/FM-COMPTA-Consulting"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                FM-COMPTA-Consulting
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A TypeScript project for accounting
-                                consulting</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet TypeScript pour le conseil
-                                comptable</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">TypeScript</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/media-convertor"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                Media Convertor
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A Swift application for media conversion with
-                                advanced features</span
-                            >
-                            <span class="lang-fr"
-                                >Une application Swift pour la conversion de
-                                médias avec des fonctionnalités avancées</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">Swift</span>
-                            <span class="badge">macOS</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/QA-Project"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                QA-Project
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A TypeScript project focused on quality
-                                assurance and testing tools</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet TypeScript axé sur l'assurance
-                                qualité et les outils de test</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">TypeScript</span>
-                            <span class="badge">QA</span>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3>
-                            <a
-                                href="https://github.com/ROLANDsebastien/Resume-ATS"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github"></i>
-                                Resume-ATS
-                            </a>
-                        </h3>
-                        <p>
-                            <span class="lang-en"
-                                >A Swift project for resume optimization and ATS
-                                compatibility</span
-                            >
-                            <span class="lang-fr"
-                                >Un projet Swift pour l'optimisation de CV et la
-                                compatibilité ATS</span
-                            >
-                        </p>
-                        <div>
-                            <span class="badge">Swift</span>
-                            <span class="badge">AI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-certificate"></i>
-                    <span class="lang-en">Certifications</span>
-                    <span class="lang-fr">Certifications</span>
-                </h2>
-                <div class="card-grid">
-                    <div class="cert">
-                        <h3>
-                            <i class="fas fa-award"></i>
-                            ISTQB (CTFL)
-                        </h3>
-                        <p class="company">GASQ</p>
-                        <p>
-                            <i class="fas fa-id-badge"></i>
-                            <span class="lang-en"
-                                >Certification Number: 115594</span
-                            >
-                            <span class="lang-fr"
-                                >Numéro de certification : 115594</span
-                            >
-                        </p>
-                        <p class="period">
-                            <i class="fas fa-calendar-check"></i>
-                            <span class="lang-en">8 November 2024</span>
-                            <span class="lang-fr">8 Novembre 2024</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- References Section -->
-        <section id="references">
-            <div class="container">
-                <h2>
-                    <i class="fas fa-handshake"></i>
-                    <span class="lang-en">References</span>
-                    <span class="lang-fr">Références</span>
-                </h2>
-                <div class="card-grid">
-                    <div class="ref">
-                        <h3>
-                            <i class="fas fa-user-tie"></i>
-                            Balinder Walia
-                        </h3>
-                        <p class="company">DevOps / SRE</p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:bwalia@workstation.be"
-                                >bwalia@workstation.be</a
-                            >
-                        </p>
-                    </div>
-
-                    <div class="ref">
-                        <h3>
-                            <i class="fas fa-user-tie"></i>
-                            HERBOMEZ Sonia
-                        </h3>
-                        <p class="company">
-                            <span class="lang-en"
-                                >RTBF Testing Cell Manager</span
-                            >
-                            <span class="lang-fr"
-                                >Responsable cellule Testing RTBF</span
-                            >
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:scap@rtbf.be">scap@rtbf.be</a>
-                        </p>
-                    </div>
-
-                    <div class="ref">
-                        <h3>
-                            <i class="fas fa-user-tie"></i>
-                            EL FALH Tarek
-                        </h3>
-                        <p class="company">Senior IT Specialist</p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:tarek.elfaleh@gmail.com"
-                                >tarek.elfaleh@gmail.com</a
-                            >
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <p>ROLAND Sebastien - 2025</p>
-            </div>
-        </footer>
-
-        <!-- JavaScript -->
-        <script src="script.js"></script>
-    </body>
 </html>
